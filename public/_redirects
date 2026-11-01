@@ -1,0 +1,5 @@
+# SPA fallback para o Netlify.
+# O Vue Router usa createWebHistory (HTML5 History API), então o servidor precisa
+# devolver o index.html em qualquer rota — senão /posts vira 404 antes do JS rodar.
+# O status 200 (rewrite) mantém a URL na barra de endereços.
+/*  /index.html  200
