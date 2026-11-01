@@ -2,7 +2,16 @@
   <component
     :is="tag || (clickable ? 'button' : 'span')"
     :type="clickable ? 'button' : undefined"
-    :class="['base-badge', `base-badge--${variant}`, `base-badge--${size}`, { 'base-badge--clickable': clickable }]"
+    :class="[
+      'base-badge',
+      `base-badge--${variant}`,
+      `base-badge--${size}`,
+      {
+        'base-badge--clickable': clickable,
+        'base-badge--custom': !!color,
+      },
+    ]"
+    :style="color ? { '--badge-custom-color': color } : undefined"
     @click="clickable && $emit('click', $event)"
   >
     <OhVueIcon v-if="icon" :name="icon" class="base-badge__icon" />
@@ -36,6 +45,11 @@ defineProps({
   icon: { type: String, default: '' },
   clickable: { type: Boolean, default: false },
   dismissible: { type: Boolean, default: false },
+  /**
+   * Cor CSS customizada (ex: 'var(--green)').
+   * Quando fornecida, sobrescreve as cores do `variant`.
+   */
+  color: { type: String, default: '' },
 })
 
 defineEmits(['click', 'dismiss'])
@@ -90,6 +104,15 @@ defineEmits(['click', 'dismiss'])
   border-color: var(--dark-rose);
 }
 
+/* Cor customizada: usa a CSS var injetada via :style */
+.base-badge--custom {
+  background-color: var(--badge-custom-color);
+  border-color: var(--badge-custom-color);
+  color: var(--text-primary);
+  /* Sombra leve para legibilidade em fundos claros como champagne */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
 .base-badge--clickable {
   cursor: pointer;
   padding: 0.35em 0.75em;
@@ -100,6 +123,9 @@ defineEmits(['click', 'dismiss'])
 .base-badge--clickable:hover {
   transform: translateY(-1px);
   box-shadow: 0 2px 6px var(--shadow-hover);
+}
+.base-badge--custom.base-badge--clickable:hover {
+  filter: brightness(1.08);
 }
 
 .base-badge__icon { font-size: 0.95em; }

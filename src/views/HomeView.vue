@@ -162,10 +162,6 @@ const year = computed(() => now.getFullYear())
   transform: scale(1.5);
 }
 
-.logo-img {
-  transform: scale(0.25)
-}
-
 .about-text {
   flex: 1;
 }
@@ -178,6 +174,16 @@ const year = computed(() => now.getFullYear())
   background: none;
   border: none;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.logo-img {
+  width: 2em;
+  height: 2em;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .about-text p {

@@ -7,16 +7,38 @@
         :alt="title"
         class="base-post-card__cover"
         loading="lazy"
+        @error="onCoverError"
       />
-      <div v-else class="base-post-card__cover base-post-card__cover--empty" aria-hidden="true">
+      <div
+        v-else
+        class="base-post-card__cover base-post-card__cover--empty"
+        aria-hidden="true"
+      >
         <span>{{ emoji || '📝' }}</span>
       </div>
     </router-link>
 
+    <div v-else class="base-post-card__cover-link">
+      <img
+        v-if="cover"
+        :src="cover"
+        :alt="title"
+        class="base-post-card__cover"
+        loading="lazy"
+        @error="onCoverError"
+      />
+      <div
+        v-else
+        class="base-post-card__cover base-post-card__cover--empty"
+        aria-hidden="true"
+      >
+        <span>{{ emoji || '📝' }}</span>
+      </div>
+    </div>
+
     <div class="base-post-card__body">
-      <div v-if="category" class="base-post-card__meta">
-        <BaseBadge variant="primary" size="sm">{{ category }}</BaseBadge>
-        <span v-if="readTime" class="base-post-card__read">{{ readTime }} min de leitura</span>
+      <div v-if="readTime" class="base-post-card__meta">
+        <span class="base-post-card__read">{{ readTime }} min de leitura</span>
       </div>
 
       <h3 class="base-post-card__title">
@@ -27,17 +49,23 @@
       <p v-if="excerpt" class="base-post-card__excerpt">{{ excerpt }}</p>
 
       <footer class="base-post-card__footer">
-        <div class="base-post-card__author">
-          <BaseAvatar :name="author" :src="authorAvatar" size="sm" />
-          <div>
-            <div class="base-post-card__author-name">{{ author }}</div>
-            <time v-if="date" :datetime="date" class="base-post-card__date">
-              {{ formattedDate }}
-            </time>
-          </div>
+        <div class="base-post-card__info">
+          <BaseBadge
+            v-if="category"
+            :color="categoryColor"
+            size="sm"
+          >
+            {{ category }}
+          </BaseBadge>
+          <time v-if="date" :datetime="date" class="base-post-card__date">
+            {{ formattedDate }}
+          </time>
         </div>
 
-        <div class="base-post-card__stats" v-if="likes != null || comments != null">
+        <div
+          v-if="likes != null || comments != null"
+          class="base-post-card__stats"
+        >
           <span v-if="likes != null" title="Curtidas">
             <OhVueIcon name="fa-regular-heart" /> {{ likes }}
           </span>
@@ -51,9 +79,9 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import BaseAvatar from './BaseAvatar.vue'
+import { computed, ref, watch } from 'vue'
 import BaseBadge from './BaseBadge.vue'
+import { getTagColor } from '@/constants/tagColors'
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -61,14 +89,27 @@ const props = defineProps({
   cover: { type: String, default: '' },
   emoji: { type: String, default: '' },
   category: { type: String, default: '' },
-  author: { type: String, default: 'Anônimo' },
-  authorAvatar: { type: String, default: '' },
   date: { type: String, default: '' },
   readTime: { type: [Number, String], default: '' },
   likes: { type: Number, default: null },
   comments: { type: Number, default: null },
   to: { type: [String, Object], default: '' },
 })
+
+/** Cor da tag (var CSS) — fallback champagne para tags gerais. */
+const categoryColor = computed(() => getTagColor(props.category))
+
+/** Se a imagem falhar, esconde e cai no fallback visual. */
+const imageBroken = ref(false)
+watch(
+  () => props.cover,
+  () => (imageBroken.value = false)
+)
+function onCoverError() {
+  imageBroken.value = true
+}
+/** Usada no template: mostra img só se houver cover válido e não quebrado. */
+const cover_ = computed(() => (imageBroken.value ? '' : props.cover))
 
 const formattedDate = computed(() => {
   if (!props.date) return ''
@@ -145,7 +186,10 @@ const formattedDate = computed(() => {
   color: inherit;
   text-decoration: none;
 }
-.base-post-card__title a:hover { color: var(--strong-rose); text-decoration: none; }
+.base-post-card__title a:hover {
+  color: var(--strong-rose);
+  text-decoration: none;
+}
 
 .base-post-card__excerpt {
   font-size: 0.93em;
@@ -169,17 +213,14 @@ const formattedDate = computed(() => {
   border-top: 1px dashed var(--border);
   flex-wrap: wrap;
 }
-.base-post-card__author {
+.base-post-card__info {
   display: flex;
   align-items: center;
   gap: 0.6em;
-}
-.base-post-card__author-name {
-  font-weight: 600;
-  font-size: 0.85em;
+  flex-wrap: wrap;
 }
 .base-post-card__date {
-  font-size: 0.75em;
+  font-size: 0.78em;
   color: var(--text-secondary);
 }
 .base-post-card__stats {

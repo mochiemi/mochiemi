@@ -11,6 +11,7 @@ export { default as BaseModal } from './BaseModal.vue'
 export { default as BasePagination } from './BasePagination.vue'
 export { default as BasePostCard } from './BasePostCard.vue'
 export { default as BaseProgress } from './BaseProgress.vue'
+export { default as BaseSearchBar } from './BaseSearchBar.vue' // <-- NOVO
 export { default as BaseSelect } from './BaseSelect.vue'
 export { default as BaseTabs } from './BaseTabs.vue'
 export { default as BaseTextarea } from './BaseTextarea.vue'
