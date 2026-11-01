@@ -81,7 +81,7 @@
         :title="post.title"
         :excerpt="stripHtml(post.content || '')"
         :cover="extractFirstImage(post.content)"
-        :category="post.labels?.[0]"
+        :tag="post.labels?.[0]"
         :date="post.published"
         :to="`/post/${post.id}`"
       />
@@ -245,8 +245,8 @@ watch(() => route.query, () => loadPosts(''))
   margin: 0.75em 0 1em;
   padding: 0.75em;
   background-color: var(--surface-secondary);
-  border: 1px dashed var(--border);
-  border-radius: 10px;
+  border: var(--border-width) dashed var(--border);
+  border-radius: var(--radius-md);
 }
 .tags-bar__label {
   font-weight: 700;

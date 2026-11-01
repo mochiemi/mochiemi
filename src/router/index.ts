@@ -19,18 +19,17 @@ const router = createRouter({
       name: 'PostDetail',
       component: () => import('@/views/PostDetailView.vue'),
     },
-
     {
-      path: '/test',
-      name: 'test',
-      component: () => import('@/views/TestView.vue'),
+      path: '/sobre',
+      name: 'Sobre',
+      component: () => import('@/views/AboutView.vue'),
+    },
+    {
+      path: '/horarios',
+      name: 'Horarios',
+      component: () => import('@/views/HorariosView.vue'),
     },
 
-    {
-      path: '/html',
-      name: 'html',
-      component: () => import('@/views/HtmlView.vue'),
-    },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',

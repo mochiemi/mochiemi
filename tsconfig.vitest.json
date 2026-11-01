@@ -1,9 +1,10 @@
-{
+﻿{
   "extends": "./tsconfig.app.json",
 
-  // Override to include only test files and clear exclusions.
-  // Application code imported in tests is automatically included via module resolution.
-  "include": ["src/**/__tests__/*", "env.d.ts"],
+  // Só os testes entram no projeto; os módulos importados por eles são
+  // resolvidos normalmente, mas os `.d.ts` precisam estar aqui para que
+  // `declare module '*.vue'` (src/types) valha também nos testes.
+  "include": ["src/**/__tests__/*", "src/**/*.d.ts", "env.d.ts"],
   "exclude": [],
 
   "compilerOptions": {

@@ -23,8 +23,8 @@ defineProps({
 .base-empty {
   text-align: center;
   padding: 2.5em 1.5em;
-  border: 2px dashed var(--border);
-  border-radius: 12px;
+  border: var(--border-width) dashed var(--border);
+  border-radius: var(--radius-md);
   background-color: var(--surface-secondary);
   color: var(--text-secondary);
   margin: 1em 0;
@@ -36,6 +36,9 @@ defineProps({
   display: inline-flex;
 }
 .base-empty__title {
+  /* zera a borda tracejada que o h3 global aplica */
+  padding: 0;
+  border: 0;
   font-family: 'Bellota', cursive;
   font-size: 1.4em;
   color: var(--title-secondary);

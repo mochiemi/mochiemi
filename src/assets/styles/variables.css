@@ -113,6 +113,16 @@
   --badge-info: var(--sky-blue);
   --badge-info-bg: var(--inner-surface);
   --badge-info-border: var(--border-secondary);
+
+  /* ===== Forma e profundidade (escala única dos componentes de UI) ===== */
+  --radius-sm: 8px; /* controles: botões, inputs, selects, busca */
+  --radius-md: 12px; /* superfícies: cards, alerts, modais, fieldsets */
+  --radius-pill: 999px; /* badges, chips, paginação */
+  --border-width: 2px;
+
+  --shadow-sm: 0 2px 8px var(--shadow); /* repouso */
+  --shadow-md: 0 6px 16px var(--shadow-hover); /* hover */
+  --shadow-lg: 0 12px 40px var(--shadow); /* elementos flutuantes */
 }
 
 :root.dark-theme {

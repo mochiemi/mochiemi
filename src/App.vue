@@ -4,7 +4,7 @@
     <main class="main-content">
       <router-view />
     </main>
-    <Footer />
+    <AppFooter />
     <ToTop />
   </div>
 </template>
@@ -14,7 +14,7 @@ import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
 import AppNavbar from '@/components/layout/AppNavbar.vue'
-import Footer from '@/components/layout/Footer.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 import ToTop from '@/components/layout/ToTop.vue'
 
 import '@/assets/styles/variables.css'

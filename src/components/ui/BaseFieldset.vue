@@ -13,12 +13,12 @@ defineProps({
 
 <style scoped>
 .base-fieldset {
-  border: 2px solid var(--border);
+  border: var(--border-width) solid var(--border);
   padding: 1.25em;
   margin: 1em 0;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background-color: var(--surface-primary);
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 
 .base-fieldset__legend {

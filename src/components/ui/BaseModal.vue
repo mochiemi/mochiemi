@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 
 const props = defineProps({
   modelValue: { type: Boolean, default: false },
@@ -83,8 +83,6 @@ onBeforeUnmount(() => {
   document.body.style.overflow = ''
   document.removeEventListener('keydown', onKeydown)
 })
-
-const _ = computed(() => titleId) // evita tree-shake em builds
 </script>
 
 <style scoped>
@@ -101,13 +99,13 @@ const _ = computed(() => titleId) // evita tree-shake em builds
 .base-modal__dialog {
   background-color: var(--surface-primary);
   color: var(--text-primary);
-  border-radius: 12px;
-  box-shadow: 0 12px 40px var(--shadow);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 2px solid var(--border);
+  border: var(--border-width) solid var(--border);
 }
 .base-modal__dialog--sm { max-width: 380px; }
 .base-modal__dialog--md { max-width: 560px; }

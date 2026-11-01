@@ -63,7 +63,7 @@ defineEmits(['click', 'dismiss'])
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 600;
   line-height: 1;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid transparent;
   padding: 0.35em 0.75em;
   white-space: nowrap;

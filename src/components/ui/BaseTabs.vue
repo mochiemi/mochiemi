@@ -73,7 +73,7 @@ const onKey = (e, idx) => {
 .base-tabs__tab {
   background: transparent;
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: var(--border-width) solid transparent;
   border-radius: 0;
   box-shadow: none;
   color: var(--text-secondary);

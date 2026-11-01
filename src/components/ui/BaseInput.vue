@@ -89,8 +89,8 @@ function coerce(value) {
   font-size: 0.95em;
   color: var(--text-primary);
   background-color: var(--surface-secondary);
-  border: 2px solid var(--border);
-  border-radius: 6px;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
   padding: 0.5em 0.75em;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;

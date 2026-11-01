@@ -29,20 +29,39 @@ defineProps({
 .base-card {
   margin: 1em 0;
   padding: 1em;
-  border-radius: 8px;
-  background-color: var(--surface-secondary);
-  border: 2px solid var(--secondary);
+  border-radius: var(--radius-md);
+  /*
+   * `--card-accent` define a personalidade do card: borda tracejada 2px na cor
+   * e fundo levemente tingido por ela. Quem usa o card só precisa definir a
+   * variável (ex.: `--card-accent: var(--rose)`).
+   */
+  background-color: color-mix(
+    in srgb,
+    var(--card-accent, var(--border)) 6%,
+    var(--surface-secondary)
+  );
+  border: var(--border-width) dashed var(--card-accent, var(--border));
+  box-shadow: var(--shadow-sm);
 }
 
-.base-card--info { border-left-color: var(--secondary); }
+.base-card--info {
+  --card-accent: var(--secondary);
+}
+
 .base-card--warning {
-  border-color: var(--yellow);
+  --card-accent: var(--yellow);
   background-color: var(--surface-error);
 }
-.base-card--success { border-color: var(--deep-teal); }
+
+.base-card--success {
+  --card-accent: var(--deep-teal);
+}
 
 .base-card__header { margin-bottom: 0.5em; }
 .base-card__title {
+  /* zera borda/padding do h3 global para o título do card */
+  padding: 0;
+  border: 0;
   font-family: 'Bellota', cursive;
   font-weight: 700;
   font-size: 1.2em;

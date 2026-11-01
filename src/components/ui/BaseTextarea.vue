@@ -50,8 +50,8 @@ const textareaId = computed(() => `textarea-${useId()}`)
   font-size: 0.95em;
   color: var(--text-primary);
   background-color: var(--surface-secondary);
-  border: 2px solid var(--border);
-  border-radius: 6px;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
   padding: 0.5em 0.75em;
   resize: vertical;
   min-height: 80px;

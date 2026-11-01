@@ -10,7 +10,9 @@
       <div class="quick-links">
         <router-link to="/" class="quick-link-text">Home</router-link>
         <span class="quick-link-separator">•</span>
-        <router-link to="/test" class="quick-link-text">Test</router-link>
+        <router-link to="/posts" class="quick-link-text">Blog</router-link>
+        <span class="quick-link-separator">•</span>
+        <router-link to="/sobre" class="quick-link-text">Sobre</router-link>
       </div>
     </div>
   </footer>

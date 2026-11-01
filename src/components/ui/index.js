@@ -1,5 +1,6 @@
 export { default as AppSection } from './AppSection.vue'
 export { default as BaseAlert } from './BaseAlert.vue'
+export { default as BaseAuthor } from './BaseAuthor.vue'
 export { default as BaseAvatar } from './BaseAvatar.vue'
 export { default as BaseBadge } from './BaseBadge.vue'
 export { default as BaseButton } from './BaseButton.vue'

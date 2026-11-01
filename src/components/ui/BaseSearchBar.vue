@@ -65,8 +65,8 @@ defineEmits(['update:modelValue', 'submit', 'clear'])
   font-size: 0.95em;
   color: var(--text-primary);
   background-color: var(--surface-secondary);
-  border: 2px solid var(--border);
-  border-radius: 8px;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
   padding: 0.6em 2.4em 0.6em 2.4em;
   width: 100%;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -99,12 +99,12 @@ defineEmits(['update:modelValue', 'submit', 'clear'])
   font-size: 0.95em;
   color: var(--text-inverted);
   background-color: var(--strong-rose);
-  border: 2px solid var(--dark-rose);
-  border-radius: 8px;
+  border: var(--border-width) solid var(--border-primary);
+  border-radius: var(--radius-sm);
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 .base-search__submit:hover {
   background-color: var(--primary);

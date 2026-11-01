@@ -438,16 +438,16 @@ article {
   margin: 1em 0;
   padding: 1em;
   background-color: var(--surface-secondary);
-  border-radius: 8px;
-  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--secondary);
 }
 
 aside {
   margin: 1em 0;
   padding: 1em;
   background-color: var(--surface-error);
-  border-radius: 8px;
-  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--border-strong);
 }
 
 @keyframes pulse {

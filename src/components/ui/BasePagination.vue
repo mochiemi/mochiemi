@@ -84,9 +84,9 @@ const goTo = (page) => {
   height: 38px;
   padding: 0 0.5em;
   margin: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-pill);
   background-color: var(--surface-primary);
-  border: 2px solid var(--border);
+  border: var(--border-width) solid var(--border);
   color: var(--text-primary);
   font-weight: 700;
   cursor: pointer;

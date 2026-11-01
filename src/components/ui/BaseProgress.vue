@@ -63,7 +63,7 @@ const progressId = computed(() => `progress-${useId()}`)
   width: 100%;
   max-width: 300px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
   background-color: var(--surface-secondary);
   border: 1px solid var(--border);

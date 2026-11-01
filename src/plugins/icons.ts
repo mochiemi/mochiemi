@@ -1,6 +1,6 @@
 // plugins/icons.ts
-import { OhVueIcon, addIcons } from "oh-vue-icons"
-import { 
+import { OhVueIcon, addIcons } from 'oh-vue-icons'
+import {
   HiHome,
   FaRegularPaperPlane,
   HiInformationCircle,
@@ -57,7 +57,7 @@ import {
   BiCardChecklist,
   FaQuestionCircle,
   RiDeleteBack2Line,
-  FaRedoAlt ,
+  FaRedoAlt,
   LaPuzzlePieceSolid,
   GiWorld,
   MdPlaylistaddRound,
@@ -112,10 +112,12 @@ import {
   HiPresentationChartLine,
   FaCookieBite,
   LaRulerSolid,
-  FaBook
-
-
-} from "oh-vue-icons/icons"
+  FaBook,
+  // usados na barra de busca, estados vazios e botão voltar
+  OiSearch,
+  OiAlert,
+  HiArrowLeft,
+} from 'oh-vue-icons/icons'
 
 addIcons(
   HiHome,
@@ -174,7 +176,7 @@ addIcons(
   BiCardChecklist,
   FaQuestionCircle,
   RiDeleteBack2Line,
-  FaRedoAlt ,
+  FaRedoAlt,
   LaPuzzlePieceSolid,
   GiWorld,
   MdPlaylistaddRound,
@@ -207,7 +209,7 @@ addIcons(
   BiSearchHeart,
   MdDonotdisturb,
   OiChevronUp,
-    BiCalculator,
+  BiCalculator,
   MdCalculateRound,
   FaFlask,
   LaFlaskSolid,
@@ -229,8 +231,10 @@ addIcons(
   HiPresentationChartLine,
   FaCookieBite,
   LaRulerSolid,
-  FaBook
-
+  FaBook,
+  OiSearch,
+  OiAlert,
+  HiArrowLeft,
 )
 
 export { OhVueIcon }

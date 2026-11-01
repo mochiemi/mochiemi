@@ -44,11 +44,11 @@ defineEmits(['click'])
   gap: 0.5em;
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  box-shadow: 0 2px 8px var(--shadow);
+  border: var(--border-width) solid transparent;
+  box-shadow: var(--shadow-sm);
   line-height: 1.2;
 }
 
@@ -72,7 +72,7 @@ defineEmits(['click'])
   border-color: var(--rose);
   color: var(--text-inverted);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px var(--shadow-hover);
+  box-shadow: var(--shadow-md);
 }
 
 .base-button--secondary {

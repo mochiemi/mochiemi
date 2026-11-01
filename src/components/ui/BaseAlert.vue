@@ -64,8 +64,8 @@ const iconName = computed(
   display: flex;
   gap: 0.75em;
   padding: 0.85em 1em;
-  border-radius: 8px;
-  border: 4px solid var(--border);
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--border);
   background-color: var(--surface-secondary);
   color: var(--text-primary);
   align-items: flex-start;
