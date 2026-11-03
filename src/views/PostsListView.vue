@@ -7,6 +7,12 @@
       </p>
     </header>
 
+    <BaseAlert variant="warning" title="Aviso de conteúdo">
+      Este site pode conter conteúdos inadequados para menores de 16 anos e
+      abordar assuntos sensíveis a alguns públicos. A leitura é de
+      responsabilidade do visitante.
+    </BaseAlert>
+
     <!-- Barra de busca -->
     <BaseSearchBar
       v-model="searchTerm"
@@ -100,6 +106,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import {
+  BaseAlert,
   BasePostCard,
   BasePagination,
   BaseEmptyState,

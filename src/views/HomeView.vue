@@ -2,6 +2,12 @@
   <div class="home-view">
     <div class="home-container">
 
+      <BaseAlert variant="warning" title="Aviso de conteúdo">
+        Este site pode conter conteúdos inadequados para menores de 16 anos e
+        abordar assuntos sensíveis a alguns públicos. A leitura é de
+        responsabilidade do visitante.
+      </BaseAlert>
+
       <BaseCard class="home-card home-card--welcome">
         <div class="welcome-content">
           <h1 class="welcome-title">Bem-vindo! 🌸</h1>
@@ -98,7 +104,7 @@
             <h2 class="about-title"><img src="../assets/images/4-leaf.png" alt="Logo" class="logo-img">Mochiemi Lab</h2>
             <p>
               Aqui é apenas um laboratório pessoal onde crio ferramentas web, registro sobre ideias, entre outras coisas aleatórias que uma mente plural pode criar.<br />
-              Esta aqui ao lado é a Mochiemi, uma das personas e a idealizadora deste espaço. Tenho outro semelhante, que logo irá ser desativado.
+              Esta aqui ao lado é a Mochiemi, uma das personas e a idealizadora deste espaço.
             </p>
           </div>
         </div>
@@ -109,58 +115,73 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import { BaseAuthor, BaseCard } from '@/components/ui'
+import { BaseAlert, BaseAuthor, BaseCard } from '@/components/ui'
 import { DIAS, GRADE } from '@/constants/horarios'
 import { extractFirstImage, fetchPosts } from '@/services/bloggerApi'
 
 const now = new Date()
 
 /**
- * Frases exibidas no card de boas-vindas (pensadores + positividade).
+ * Frases exibidas no card de boas-vindas (somente autoras mulheres).
  * Ficam num array único para adicionar/remover sem tocar no template.
  */
 const QUOTES = [
-  { text: 'A vida não examinada não vale a pena ser vivida.', author: 'Sócrates' },
-  { text: 'A felicidade depende de nós mesmos.', author: 'Aristóteles' },
-  { text: 'Penso, logo existo.', author: 'René Descartes' },
-  { text: 'Tudo o que somos é resultado do que pensamos.', author: 'Buda' },
   {
-    text: 'As dificuldades fortalecem a mente, como o trabalho fortalece o corpo.',
-    author: 'Sêneca',
+    text: 'A imaginação das mulheres é muito rápida: salta de admiração a amor, de amor a casamento, num instante.',
+    author: 'Jane Austen',
   },
   {
-    text: 'A melhor vingança é não ser como aquele que te fez mal.',
-    author: 'Marco Aurélio',
+    text: 'Não há necessidade de pressa, não há necessidade de brilhar, não há necessidade de ser ninguém além de si mesma.',
+    author: 'Virginia Woolf',
   },
   {
-    text: 'Quem olha para fora sonha; quem olha para dentro desperta.',
-    author: 'Carl Jung',
+    text: 'Que nada nos limite, que nada nos defina, que nada nos sujeite. Que a liberdade seja a nossa própria substância, já que viver é ser livre.',
+    author: 'Simone de Beauvoir',
   },
   {
-    text: 'A imaginação é mais importante que o conhecimento.',
-    author: 'Albert Einstein',
+    text: 'Liberdade é pouco. O que eu desejo ainda não tem nome.',
+    author: 'Clarice Lispector',
+  },
+  { text: 'O que a memória ama fica eterno.', author: 'Adélia Prado' },
+  {
+    text: 'O que vale na vida não é o ponto de partida e sim a caminhada. Caminhando e semeando, no fim terás o que colher.',
+    author: 'Cora Coralina',
   },
   {
-    text: 'O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.',
-    author: 'Winston Churchill',
-  },
-  { text: 'Tudo vale a pena se a alma não é pequena.', author: 'Fernando Pessoa' },
-  {
-    text: 'A vida é aquilo que acontece enquanto você está ocupado fazendo outros planos.',
-    author: 'John Lennon',
+    text: 'Pés, para que os quero, se tenho asas para voar?',
+    author: 'Frida Kahlo',
   },
   {
-    text: 'Não tenha medo de desistir do bom para perseguir o ótimo.',
-    author: 'John D. Rockefeller',
+    text: 'Nada na vida deve ser temido, somente compreendido. Agora é hora de compreender mais para temer menos.',
+    author: 'Marie Curie',
   },
   {
-    text: 'O único modo de fazer um excelente trabalho é amar o que você faz.',
-    author: 'Steve Jobs',
+    text: 'Ninguém pode te fazer sentir inferior sem o seu consentimento.',
+    author: 'Eleanor Roosevelt',
   },
-  { text: 'A esperança é o sonho do homem acordado.', author: 'Aristóteles' },
   {
-    text: 'Se quiser ir rápido, vá sozinho; se quiser ir longe, vá em grupo.',
-    author: 'Provérbio africano',
+    text: 'As pessoas esquecerão o que você disse e o que você fez, mas nunca esquecerão como você as fez sentir.',
+    author: 'Maya Angelou',
+  },
+  {
+    text: 'Se há um livro que você quer ler e ele ainda não foi escrito, então você precisa escrevê-lo.',
+    author: 'Toni Morrison',
+  },
+  {
+    text: 'Apesar de tudo, eu continuo acreditando que as pessoas são realmente boas.',
+    author: 'Anne Frank',
+  },
+  {
+    text: 'Histórias importam. Muitas histórias importam.',
+    author: 'Chimamanda Ngozi Adichie',
+  },
+  {
+    text: 'Uma criança, um professor, um livro e uma caneta podem mudar o mundo.',
+    author: 'Malala Yousafzai',
+  },
+  {
+    text: 'Nunca duvide que um pequeno grupo de pessoas conscientes e comprometidas possa mudar o mundo. De fato, é a única coisa que já conseguiu.',
+    author: 'Margaret Mead',
   },
 ]
 
