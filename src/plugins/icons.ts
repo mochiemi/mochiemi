@@ -117,6 +117,7 @@ import {
   OiSearch,
   OiAlert,
   HiArrowLeft,
+  FaInstagram,
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -235,6 +236,7 @@ addIcons(
   OiSearch,
   OiAlert,
   HiArrowLeft,
+  FaInstagram,
 )
 
 export { OhVueIcon }

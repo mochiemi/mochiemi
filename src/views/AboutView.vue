@@ -13,7 +13,47 @@
       </p>
     </BaseCard>
 
-    <!-- 2) O quarteto -->
+    <!-- 2) Quem escreve -->
+    <BaseCard title="Quem escreve" class="about-card about-card--author">
+      <div class="author" :style="{ '--persona-color': getTagColor('Mochiemi') }">
+        <span class="author__monogram" aria-hidden="true">J</span>
+
+        <div class="author__content">
+          <p class="author__intro">
+            Oi! Sou a <strong>Juliana Tiemi</strong> — graduanda em farmácia e
+            ex-aluna de medicina. Curiosa assumida, estou sempre tentando o meu
+            melhor, mesmo quando o melhor do dia é só continuar tentando.
+          </p>
+          <p class="author__text">
+            Também fiz alguns cursos livres de programação e, com todo o
+            direito, já ando com delírios de grandeza: me acho experiente na
+            área. Este site é a prova viva disso — feito entre uma aula e outra,
+            com muita vontade de aprender e um pouco de teimosia.
+          </p>
+          <p class="author__text">
+            Quer trocar ideia sobre farmácia, código, personas ou qualquer coisa
+            no meio do caminho? Me encontra por aqui:
+          </p>
+
+          <ul class="author__socials">
+            <li v-for="social in socials" :key="social.name">
+              <a
+                class="author__social"
+                :href="social.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                :title="social.title"
+              >
+                <OhVueIcon :name="social.icon" aria-hidden="true" />
+                {{ social.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </BaseCard>
+
+    <!-- 3) O quarteto -->
     <BaseCard title="O quarteto" class="about-card about-card--quarteto">
       <figure class="about-figure">
         <img
@@ -42,7 +82,7 @@
       </ul>
     </BaseCard>
 
-    <!-- 3) A host -->
+    <!-- 4) A host -->
     <BaseCard title="Quem é a Mochiemi?" class="about-card about-card--host">
       <div class="host">
         <figure class="host__figure">
@@ -76,6 +116,37 @@
 <script setup>
 import { BaseCard } from '@/components/ui'
 import { getTagColor } from '@/constants/tagColors'
+
+const socials = [
+  {
+    name: 'Instagram',
+    label: 'Instagram',
+    title: '@motiemii no Instagram',
+    href: 'https://instagram.com/motiemii',
+    icon: 'fa-instagram',
+  },
+  {
+    name: 'GitHub',
+    label: 'GitHub',
+    title: 'mochiemi no GitHub',
+    href: 'https://github.com/mochiemi',
+    icon: 'fa-github',
+  },
+  {
+    name: 'LinkedIn',
+    label: 'LinkedIn',
+    title: 'Juliana Tiemi no LinkedIn',
+    href: 'https://www.linkedin.com/in/tiemi-suyama/',
+    icon: 'fa-linkedin',
+  },
+  {
+    name: 'Superprof',
+    label: 'Superprof',
+    title: 'Aulas e reforço no Superprof',
+    href: 'https://www.superprof.com.br/ola-sou-juliana-aluna-medicina-pela-unesp-granduanda-farmacia-pela-unifal-estou-aqui-para-ajudar-pessoas.html',
+    icon: 'oi-mortar-board',
+  },
+]
 
 const quarteto = [
   {
@@ -131,6 +202,10 @@ const quarteto = [
   --card-accent: var(--rose);
 }
 
+.about-card--author {
+  --card-accent: var(--deep-mint);
+}
+
 .about-card--quarteto {
   --card-accent: var(--sky-blue);
 }
@@ -148,7 +223,96 @@ const quarteto = [
   color: var(--title-secondary);
 }
 
-/* ---------- 2) Quarteto ---------- */
+/* ---------- 2) Quem escreve ---------- */
+.author {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1em 1.15em;
+  align-items: start;
+}
+
+.author__monogram {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--persona-color) 14%, var(--surface-primary));
+  border: var(--border-width) dashed var(--persona-color);
+  color: var(--persona-color);
+  font-family: 'Bellota', cursive;
+  font-size: 1.9em;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.author__content {
+  min-width: 0;
+}
+
+.author__intro {
+  margin: 0 0 0.4em;
+  font-size: 1.05em;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.author__text {
+  margin: 0 0 0.8em;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.author__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.author__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin: 0.85em 0 0;
+  padding: 0.8em 0 0;
+  border-top: 1px dashed var(--border);
+  list-style: none;
+}
+
+/* zera o estilo global de `li` (borda tracejada, margens de primeiro/último) */
+.author__socials li {
+  display: flex;
+  margin: 0;
+  border: 0;
+}
+
+.author__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.35em 0.8em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-secondary);
+  color: var(--text-primary);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.author__social:hover {
+  background-color: color-mix(in srgb, var(--card-accent) 14%, var(--surface-primary));
+  border-color: var(--card-accent);
+  color: var(--text-primary);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* ---------- 3) Quarteto ---------- */
 /* zera o estilo global de `figure` (padding/moldura inline-block) */
 .about-figure,
 .host__figure {
@@ -237,7 +401,7 @@ const quarteto = [
   color: var(--text-secondary);
 }
 
-/* ---------- 3) Mochiemi (host) ---------- */
+/* ---------- 4) Mochiemi (host) ---------- */
 .host {
   display: grid;
   grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
