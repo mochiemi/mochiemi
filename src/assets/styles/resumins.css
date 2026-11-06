@@ -1,0 +1,654 @@
+/* Estilos compartilhados das páginas de Resumins (src/views/resumins). */
+
+.resumins {
+  padding: 2rem 1rem 4rem;
+}
+
+.resumins .page-shell {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* ---------- Cabeçalho ---------- */
+.resumins .intro {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 3.25rem);
+  border: var(--border-width) dashed var(--border-secondary);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      color-mix(in srgb, var(--mint) 42%, transparent),
+      transparent 32%
+    ),
+    var(--surface-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.resumins .intro__eyebrow,
+.resumins .card-heading__eyebrow {
+  margin: 0;
+  color: var(--text-rose);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resumins .intro__title {
+  margin: 0.35rem 0 0;
+  color: var(--title-secondary);
+  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  text-align: left;
+}
+
+.resumins .intro__lead {
+  max-width: 680px;
+  margin: 0.8rem 0 0;
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+}
+
+.resumins .intro__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.resumins .intro__chip {
+  padding: 0.2rem 0.7rem;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-primary);
+}
+
+/* ---------- Migalhas ---------- */
+.resumins .breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.resumins .breadcrumb__sep {
+  color: var(--text-secondary);
+}
+
+/* ---------- Índice da página ---------- */
+.resumins .contents {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.25rem 0 2rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-primary);
+}
+
+.resumins .contents__label {
+  margin-right: 0.35rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.resumins .contents a {
+  padding: 0.32rem 0.7rem;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-pill);
+  background-color: var(--sky-blue-surface);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+/* ---------- Cartões de tópico (página inicial) ---------- */
+.resumins .subject {
+  margin: 1.6rem 0 0;
+}
+
+.resumins .topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+.resumins .topic-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  height: 100%;
+  padding: 1.15rem;
+  border: var(--border-width) dashed var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.resumins .topic-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--strong-rose);
+  color: var(--text-primary);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.resumins .topic-card__tag {
+  align-self: flex-start;
+  padding: 0.15em 0.6em;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-pill);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resumins .topic-card__title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--title-secondary);
+  font-family: 'Bellota', cursive;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.resumins .topic-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.resumins .topic-card__cta {
+  margin-top: auto;
+  padding-top: 0.65rem;
+  color: var(--link-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.resumins .topic-card:hover .topic-card__cta {
+  text-decoration: underline;
+}
+
+.resumins .coming-soon {
+  margin-top: 0.9rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ---------- Conteúdo ---------- */
+.resumins .lesson {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* Deixa os cartões encolherem: sem isso, a tabela com min-width estica o grid */
+.resumins .lesson > * {
+  min-width: 0;
+}
+
+.resumins .summary-card {
+  scroll-margin-top: 6rem;
+  margin: 0;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: var(--border-width) dashed var(--border);
+  border-left: 5px solid var(--secondary);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.resumins .summary-card--featured {
+  border-left-color: var(--deep-teal);
+}
+
+.resumins .card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.resumins .card-heading__number {
+  display: grid;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border: 1px dashed var(--border-secondary);
+  border-radius: 50%;
+  background-color: var(--sky-blue-surface);
+  color: var(--title-secondary);
+  font-family: 'Bellota', cursive;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.resumins .card-heading__eyebrow {
+  font-size: 0.68rem;
+}
+
+.resumins .card-heading h2 {
+  margin: 0.12rem 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--title-secondary);
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  text-align: left;
+}
+
+.resumins .summary-card p {
+  color: var(--text-primary);
+}
+
+.resumins .reaction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin: 1rem 0;
+  padding: 0.85rem;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-sm);
+  background-color: var(--sky-blue-surface);
+  color: var(--title-secondary);
+  font-weight: 700;
+}
+
+.resumins .reaction__arrow {
+  color: var(--text-rose);
+  font-size: 1.6rem;
+}
+
+.resumins .key-points,
+.resumins .comparison-list {
+  margin: 0.75rem 0 0 1rem;
+}
+
+.resumins .key-points li,
+.resumins .comparison-list li {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.resumins .two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.resumins .concept-panel,
+.resumins .factor,
+.resumins .worked-example {
+  margin: 0;
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-secondary);
+}
+
+.resumins .concept-panel--mint {
+  border-top: 3px solid var(--deep-mint);
+}
+
+.resumins .concept-panel--rose {
+  border-top: 3px solid var(--strong-rose);
+}
+
+.resumins .concept-panel h3,
+.resumins .factor h3,
+.resumins .worked-example h3 {
+  margin: 0 0 0.45rem;
+  padding: 0;
+  border: 0;
+  color: var(--title-secondary);
+  font-size: 1.05rem;
+}
+
+.resumins .equation {
+  color: var(--title-secondary) !important;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.resumins .concept-panel small {
+  color: var(--text-secondary);
+}
+
+.resumins .card-note {
+  margin: 1rem 0 0 !important;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--strong-rose);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background-color: var(--rose-surface);
+  font-size: 0.92rem;
+}
+
+.resumins .factor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.resumins .factor__icon {
+  display: inline-grid;
+  min-width: 2rem;
+  height: 2rem;
+  place-items: center;
+  margin-bottom: 0.55rem;
+  padding: 0 0.35rem;
+  border-radius: 50%;
+  background-color: var(--rose-surface);
+  color: var(--title-primary);
+  font-weight: 700;
+}
+
+.resumins .factor__example {
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border);
+  color: var(--text-secondary) !important;
+  font-size: 0.88rem;
+}
+
+/* ---------- Fórmulas ---------- */
+.resumins .formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1.2rem;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-md);
+  background-color: var(--inner-surface);
+  color: var(--title-secondary);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.resumins .formula__label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.resumins .formula__fraction {
+  display: inline-grid;
+  text-align: center;
+}
+
+.resumins .formula__fraction span:first-child {
+  padding: 0 0.35rem 0.3rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.resumins .formula__fraction span:last-child {
+  padding: 0.3rem 0.35rem 0;
+}
+
+.resumins .worked-example {
+  margin-top: 1rem;
+  border-left: 3px solid var(--deep-mint);
+}
+
+.resumins .worked-example--soft {
+  border-left-color: var(--strong-rose);
+}
+
+.resumins .worked-example .equation {
+  overflow-x: auto;
+  padding: 0.35rem 0;
+  white-space: nowrap;
+}
+
+/* ---------- Tabelas de dados ---------- */
+.resumins .table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: var(--radius-md);
+}
+
+.resumins .data-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: var(--border-width) dashed var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-primary);
+  overflow: hidden;
+  font-size: 0.88rem;
+}
+
+.resumins .data-table th,
+.resumins .data-table td {
+  padding: 0.5rem 0.65rem;
+  border-top: 2px dashed var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.resumins .data-table thead th {
+  border-top: 0;
+  background-color: var(--navbar-surface);
+  color: var(--text-primary);
+  font-family: 'Bellota', cursive;
+  font-size: 0.95rem;
+}
+
+.resumins .data-table tbody th {
+  color: var(--title-secondary);
+  font-weight: 700;
+}
+
+.resumins .data-table caption {
+  padding-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.resumins .data-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- Gráficos de energia ---------- */
+.resumins .graph-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.resumins .graph {
+  display: block;
+  margin: 0;
+  padding: 0.9rem 1rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-secondary);
+  box-shadow: none;
+}
+
+.resumins .graph figcaption {
+  margin: 0;
+  color: var(--title-secondary);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+}
+
+.resumins .energy-chart {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0 0;
+  color: var(--title-secondary);
+}
+
+.resumins .energy-chart__curve {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.resumins .energy-chart__guide {
+  fill: none;
+  stroke: var(--text-rose);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+  vector-effect: non-scaling-stroke;
+}
+
+.resumins .energy-chart__axis {
+  stroke: var(--border);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.resumins .energy-chart__label {
+  fill: var(--text-secondary);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* ---------- Passo a passo ---------- */
+.resumins .steps {
+  margin: 0.75rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.resumins .steps li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+/* ---------- Rodapé de navegação entre resumos ---------- */
+.resumins .topic-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--border);
+}
+
+.resumins .topic-nav__link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-primary);
+  font-size: 0.85rem;
+}
+
+.resumins .topic-nav__link span {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Nota final ---------- */
+.resumins .study-note {
+  margin: 0;
+  padding: 1.2rem 1.4rem;
+  border: 2px dashed var(--border-strong-blue);
+  border-radius: var(--radius-md);
+  background-color: var(--sky-blue-surface);
+}
+
+.resumins .intro + .study-note {
+  margin-top: 1.25rem;
+}
+
+.resumins .study-note h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--title-secondary);
+  font-size: 1.35rem;
+  text-align: left;
+}
+
+.resumins .study-note__source {
+  margin-bottom: 0 !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .resumins {
+    padding: 1.2rem 0.75rem 2.5rem;
+  }
+
+  .resumins .contents {
+    align-items: flex-start;
+  }
+
+  .resumins .contents__label {
+    flex-basis: 100%;
+  }
+
+  .resumins .two-columns,
+  .resumins .factor-grid,
+  .resumins .graph-grid,
+  .resumins .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resumins .card-heading {
+    align-items: flex-start;
+  }
+
+  .resumins .card-heading__number {
+    flex-basis: 2.35rem;
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 0.9rem;
+  }
+
+  .resumins .formula {
+    gap: 0.5rem;
+    font-size: 0.98rem;
+  }
+}

@@ -29,6 +29,23 @@ const router = createRouter({
       name: 'Horarios',
       component: () => import('@/views/HorariosView.vue'),
     },
+    {
+      path: '/resumins',
+      name: 'Resumins',
+      component: () => import('@/views/ResuminsView.vue'),
+    },
+    {
+      path: '/resumins/quimica/equilibrio',
+      name: 'ResuminsQuimicaEquilibrio',
+      component: () =>
+        import('@/views/resumins/quimica/EquilibrioQuimicoView.vue'),
+    },
+    {
+      path: '/resumins/quimica/cinetica',
+      name: 'ResuminsQuimicaCinetica',
+      component: () =>
+        import('@/views/resumins/quimica/CineticaQuimicaView.vue'),
+    },
 
     {
       path: '/:pathMatch(.*)*',

@@ -114,7 +114,10 @@ const links = [
   { to: '/sobre', label: 'Sobre' },
   {
     label: 'Ferramentas',
-    children: [{ to: '/horarios', label: 'Horários' }],
+    children: [
+      { to: '/horarios', label: 'Horários' },
+      { to: '/resumins', label: 'Resumins' },
+    ],
   },
 ]
 

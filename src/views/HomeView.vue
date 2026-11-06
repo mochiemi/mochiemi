@@ -24,6 +24,25 @@
         </div>
       </BaseCard>
 
+      <BaseCard class="home-card home-card--about">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="../assets/images/mochimain.png"
+              alt="Mochiemi"
+              class="about-img"
+            />
+          </div>
+          <div class="about-text">
+            <h2 class="about-title"><img src="../assets/images/4-leaf.png" alt="Logo" class="logo-img">Mochiemi Lab</h2>
+            <p>
+              Aqui é apenas um laboratório pessoal onde crio ferramentas web, registro sobre ideias, entre outras coisas aleatórias que uma mente plural pode criar.<br />
+              Esta aqui ao lado é a Mochiemi, uma das personas e a idealizadora deste espaço.
+            </p>
+          </div>
+        </div>
+      </BaseCard>
+
       <!-- Dois cards curtos: próxima aula e último post -->
       <div class="home-highlights">
         <BaseCard class="home-card home-card--highlight home-card--next">
@@ -90,25 +109,6 @@
           </div>
         </BaseCard>
       </div>
-
-      <BaseCard class="home-card home-card--about">
-        <div class="about-content">
-          <div class="about-image">
-            <img
-              src="../assets/images/mochimain.png"
-              alt="Mochiemi"
-              class="about-img"
-            />
-          </div>
-          <div class="about-text">
-            <h2 class="about-title"><img src="../assets/images/4-leaf.png" alt="Logo" class="logo-img">Mochiemi Lab</h2>
-            <p>
-              Aqui é apenas um laboratório pessoal onde crio ferramentas web, registro sobre ideias, entre outras coisas aleatórias que uma mente plural pode criar.<br />
-              Esta aqui ao lado é a Mochiemi, uma das personas e a idealizadora deste espaço.
-            </p>
-          </div>
-        </div>
-      </BaseCard>
     </div>
   </div>
 </template>
