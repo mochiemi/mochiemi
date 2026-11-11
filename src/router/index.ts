@@ -37,14 +37,30 @@ const router = createRouter({
     {
       path: '/resumins/quimica/equilibrio',
       name: 'ResuminsQuimicaEquilibrio',
-      component: () =>
-        import('@/views/resumins/quimica/EquilibrioQuimicoView.vue'),
+      component: () => import('@/views/resumins/quimica/EquilibrioQuimicoView.vue'),
     },
     {
       path: '/resumins/quimica/cinetica',
       name: 'ResuminsQuimicaCinetica',
-      component: () =>
-        import('@/views/resumins/quimica/CineticaQuimicaView.vue'),
+      component: () => import('@/views/resumins/quimica/CineticaQuimicaView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/resumogeral',
+      alias: '/resumins/unifal/farmacovigilancia/resumogeral.view',
+      name: 'ResuminsUnifalFarmacovigilanciaResumoGeral',
+      component: () => import('@/views/resumins/unifal/FarmacovigilanciaResumoGeralView.vue'),
+    },
+    {
+      path: '/resumins/unifal/operacoes',
+      alias: '/resumins/unifal/operacoes.view',
+      name: 'ResuminsUnifalOperacoes',
+      component: () => import('@/views/resumins/unifal/OperacoesResumoGeralView.vue'),
+    },
+    {
+      path: '/resumins/unifal/operacoes/filtracao',
+      alias: '/resumins/unifal/operacoes/filtracao.view',
+      name: 'ResuminsUnifalOperacoesFiltracao',
+      component: () => import('@/views/resumins/unifal/OperacoesFiltracaoView.vue'),
     },
 
     {
