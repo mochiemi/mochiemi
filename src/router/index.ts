@@ -62,6 +62,71 @@ const router = createRouter({
       name: 'ResuminsUnifalOperacoesFiltracao',
       component: () => import('@/views/resumins/unifal/OperacoesFiltracaoView.vue'),
     },
+    {
+      path: '/resumins/farmacotec1',
+      name: 'ResuminsFarmacotec1',
+      component: () => import('@/views/resumins/farmacotec1/Farmacotec1IndexView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/classificacao',
+      name: 'ResuminsFarmacotec1Classificacao',
+      component: () => import('@/views/resumins/farmacotec1/ClassificacaoMedicamentosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/conservacao',
+      name: 'ResuminsFarmacotec1Conservacao',
+      component: () => import('@/views/resumins/farmacotec1/ConservacaoAcondicionamentoView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/adjuvantes',
+      name: 'ResuminsFarmacotec1Adjuvantes',
+      component: () => import('@/views/resumins/farmacotec1/AdjuvantesView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/corretivos',
+      name: 'ResuminsFarmacotec1Corretivos',
+      component: () => import('@/views/resumins/farmacotec1/CorretivosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/calculos',
+      name: 'ResuminsFarmacotec1Calculos',
+      component: () => import('@/views/resumins/farmacotec1/CalculosFarmaceuticosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/solucoes',
+      name: 'ResuminsFarmacotec1Solucoes',
+      component: () => import('@/views/resumins/farmacotec1/SolucoesSimplesView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/extrativas',
+      name: 'ResuminsFarmacotec1Extrativas',
+      component: () => import('@/views/resumins/farmacotec1/SolucoesExtrativasView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/xaropes',
+      name: 'ResuminsFarmacotec1Xaropes',
+      component: () => import('@/views/resumins/farmacotec1/XaropesElixiresView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/alcooleos',
+      name: 'ResuminsFarmacotec1Alcooleos',
+      component: () => import('@/views/resumins/farmacotec1/AlcooleosGliceroleosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/colirios',
+      name: 'ResuminsFarmacotec1Colirios',
+      component: () => import('@/views/resumins/farmacotec1/ColiriosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/otologicos',
+      name: 'ResuminsFarmacotec1Otologicos',
+      component: () => import('@/views/resumins/farmacotec1/OtofarmacosErrinosView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/relatorios',
+      name: 'ResuminsFarmacotec1Relatorios',
+      component: () => import('@/views/resumins/farmacotec1/RelatoriosPraticaView.vue'),
+    },
 
     {
       path: '/:pathMatch(.*)*',
