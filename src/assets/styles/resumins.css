@@ -117,11 +117,45 @@
   margin: 1.6rem 0 0;
 }
 
+/* ---------- Grupos por disciplina (página inicial) ---------- */
+.resumins .subject__lead {
+  margin: 0.3rem 0 1rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.resumins .subject__group {
+  margin-top: 1.35rem;
+}
+
+.resumins .subject__group:first-of-type {
+  margin-top: 0;
+}
+
+.resumins .subject__group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.35rem;
+  border: 0;
+  border-bottom: 1px dashed var(--border-secondary);
+  background: none;
+  color: var(--title-secondary);
+  font-family: 'Bellota', cursive;
+  font-size: 1.15rem;
+  text-align: left;
+}
+
 .resumins .topic-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 0.9rem;
+}
+
+.resumins .topic-grid--single {
+  grid-template-columns: 1fr;
 }
 
 .resumins .topic-card {
@@ -645,6 +679,10 @@
     width: 2.35rem;
     height: 2.35rem;
     font-size: 0.9rem;
+  }
+
+  .resumins .subject__group-title {
+    font-size: 1.05rem;
   }
 
   .resumins .formula {

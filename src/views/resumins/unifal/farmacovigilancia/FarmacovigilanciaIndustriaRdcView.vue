@@ -4,6 +4,8 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span>UNIFAL-MG</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <router-link to="/resumins/unifal/farmacovigilancia">Farmacovigilância</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Indústria e RDC 406</span>

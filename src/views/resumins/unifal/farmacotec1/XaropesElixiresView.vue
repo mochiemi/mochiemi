@@ -4,7 +4,9 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1">Farmacotécnica I</router-link>
+        <span>UNIFAL-MG</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <router-link to="/resumins/unifal/farmacotec1">Farmacotécnica I</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Xaropes e elixires</span>
       </nav>
@@ -542,11 +544,11 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/extrativas">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/extrativas">
             <span>Anterior</span>
             ← Soluções extrativas
           </router-link>
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/alcooleos">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/alcooleos">
             <span>Próximo</span>
             Alcóoleos e gliceróleos →
           </router-link>

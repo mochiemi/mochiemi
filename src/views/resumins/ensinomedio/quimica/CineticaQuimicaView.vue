@@ -4,6 +4,8 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span>Ensino médio</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Química</span>
       </nav>
 
@@ -478,7 +480,7 @@
           </router-link>
           <router-link
             class="topic-nav__link"
-            to="/resumins/quimica/equilibrio"
+            to="/resumins/ensinomedio/quimica/equilibrio"
           >
             <span>Anterior</span>
             Equilíbrio químico →

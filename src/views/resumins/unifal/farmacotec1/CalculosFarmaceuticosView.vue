@@ -4,7 +4,9 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1">Farmacotécnica I</router-link>
+        <span>UNIFAL-MG</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <router-link to="/resumins/unifal/farmacotec1">Farmacotécnica I</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Cálculos</span>
       </nav>
@@ -700,11 +702,11 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/corretivos">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/corretivos">
             <span>Anterior</span>
             ← Corretivos
           </router-link>
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/solucoes">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/solucoes">
             <span>Próximo</span>
             Soluções simples →
           </router-link>

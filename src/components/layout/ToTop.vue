@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
 .to-top-button {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  left: 2rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -100,7 +100,7 @@ onBeforeUnmount(() => {
 @media (max-width: 768px) {
   .to-top-button {
     bottom: 1.5rem;
-    right: 1.5rem;
+    left: 1.5rem;
     width: 55px;
     height: 55px;
   }
@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
 @media (max-width: 480px) {
   .to-top-button {
     bottom: 1em;
-    right: 1em;
+    left: 1em;
     width: 50px;
     height: 50px;
   }

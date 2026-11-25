@@ -4,9 +4,11 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1">Farmacotécnica I</router-link>
+        <span>UNIFAL-MG</span>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1/formas">Formas farmacêuticas</router-link>
+        <router-link to="/resumins/unifal/farmacotec1">Farmacotécnica I</router-link>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <router-link to="/resumins/unifal/farmacotec1/formas">Formas farmacêuticas</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Iodeto de potássio</span>
       </nav>
@@ -299,11 +301,11 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/formas">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/formas">
             <span>Voltar</span>
             ← Formas farmacêuticas
           </router-link>
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/formas/xarope">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/formas/xarope">
             <span>Próximo</span>
             Xarope de clorfeniramina →
           </router-link>

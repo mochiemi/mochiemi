@@ -4,7 +4,9 @@
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1">Farmacotécnica I</router-link>
+        <span>UNIFAL-MG</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <router-link to="/resumins/unifal/farmacotec1">Farmacotécnica I</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Formas farmacêuticas</span>
       </nav>
@@ -210,11 +212,11 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1">
             <span>Voltar</span>
             ← Farmacotécnica I
           </router-link>
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/formas/iodeto">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/formas/iodeto">
             <span>Começar por</span>
             Solução de iodeto de potássio →
           </router-link>
@@ -229,7 +231,7 @@ import '@/assets/styles/resumins.css'
 
 const solutionTopics = [
   {
-    to: '/resumins/farmacotec1/formas/iodeto',
+    to: '/resumins/unifal/farmacotec1/formas/iodeto',
     tag: 'Solução oral · 4 componentes',
     title: 'Iodeto de potássio 10% m/v',
     description:
@@ -239,14 +241,14 @@ const solutionTopics = [
 
 const sweetTopics = [
   {
-    to: '/resumins/farmacotec1/formas/xarope',
+    to: '/resumins/unifal/farmacotec1/formas/xarope',
     tag: 'Xarope · 7 componentes',
     title: 'Xarope de maleato de clorfeniramina',
     description:
       'Sacarose a 65% como edulcorante e conservante osmótico, controle de temperatura contra a inversão e ensaios de densidade e polarimetria.',
   },
   {
-    to: '/resumins/farmacotec1/formas/elixir',
+    to: '/resumins/unifal/farmacotec1/formas/elixir',
     tag: 'Elixir · 9 componentes',
     title: 'Elixir de paracetamol 40 mg/mL',
     description:
@@ -256,7 +258,7 @@ const sweetTopics = [
 
 const extractiveTopics = [
   {
-    to: '/resumins/farmacotec1/formas/tintura',
+    to: '/resumins/unifal/farmacotec1/formas/tintura',
     tag: 'Extrato · percolação',
     title: 'Tintura de beladona 10%',
     description:
@@ -266,21 +268,21 @@ const extractiveTopics = [
 
 const mucosaTopics = [
   {
-    to: '/resumins/farmacotec1/formas/colirio',
+    to: '/resumins/unifal/farmacotec1/formas/colirio',
     tag: 'Oftálmico · 5 componentes',
     title: 'Colírio de sulfato de zinco 0,25%',
     description:
       'Esterilidade por filtração 0,22 µm, isotonia calculada e tampão borato que mantém o zinco solúvel em pH compatível com a córnea.',
   },
   {
-    to: '/resumins/farmacotec1/formas/otologico',
+    to: '/resumins/unifal/farmacotec1/formas/otologico',
     tag: 'Otológico · 3 componentes',
     title: 'Cerumenolítico de carbonato de sódio',
     description:
       'Saponificação do cerume com liberação de CO₂ e glicerina como veículo de retenção, emoliência e proteção da pele do conduto.',
   },
   {
-    to: '/resumins/farmacotec1/formas/errino',
+    to: '/resumins/unifal/farmacotec1/formas/errino',
     tag: 'Nasal · 5 componentes',
     title: 'Errino de nafazolina 0,05%',
     description:
@@ -290,7 +292,7 @@ const mucosaTopics = [
 
 const dispersionTopics = [
   {
-    to: '/resumins/farmacotec1/formas/suspensao',
+    to: '/resumins/unifal/farmacotec1/formas/suspensao',
     tag: 'Suspensão · 10 componentes',
     title: 'Suspensão antiácida floculada',
     description:

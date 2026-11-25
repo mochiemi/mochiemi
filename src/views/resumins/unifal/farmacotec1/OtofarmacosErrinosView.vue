@@ -1,10 +1,12 @@
-﻿<template>
+<template>
   <div class="resumins">
     <div class="page-shell">
       <nav class="breadcrumb" aria-label="Você está aqui">
         <router-link to="/resumins">Resumins</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <router-link to="/resumins/farmacotec1">Farmacotécnica I</router-link>
+        <span>UNIFAL-MG</span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <router-link to="/resumins/unifal/farmacotec1">Farmacotécnica I</router-link>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>Otofármacos e errinos</span>
       </nav>
@@ -502,11 +504,11 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/colirios">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/colirios">
             <span>Anterior</span>
             ← Colírios
           </router-link>
-          <router-link class="topic-nav__link" to="/resumins/farmacotec1/relatorios">
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacotec1/relatorios">
             <span>Próximo</span>
             Relatórios de prática →
           </router-link>
