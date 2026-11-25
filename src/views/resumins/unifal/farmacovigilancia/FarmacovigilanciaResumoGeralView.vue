@@ -6,7 +6,7 @@
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
         <span>UNIFAL-MG</span>
         <span class="breadcrumb__sep" aria-hidden="true">/</span>
-        <span>Farmacovigilância</span>
+        <router-link to="/resumins/unifal/farmacovigilancia">Farmacovigilância</router-link>
       </nav>
 
       <header class="intro">
@@ -803,6 +803,12 @@
                 </tr>
                 <tr>
                   <th scope="row">
+                    Evento adverso grave com óbito ou risco de morte, no Brasil
+                  </th>
+                  <td class="num">7 dias corridos</td>
+                </tr>
+                <tr>
+                  <th scope="row">
                     Situações urgentes que afetem a segurança do paciente
                   </th>
                   <td class="num">72 horas</td>
@@ -959,7 +965,10 @@
               terceirização do RFV e do substituto.
             </li>
             <li>EAG no Brasil: notificação via VigiMed em até 15 dias corridos.</li>
-            <li>Urgências de segurança: comunicação em até 72 horas.</li>
+            <li>
+              EAG com óbito ou risco de morte: até 7 dias corridos; urgências de segurança:
+              comunicação em até 72 horas.
+            </li>
             <li>Registros de segurança guardados por, no mínimo, 20 anos.</li>
             <li>
               RPBR: sumário executivo em português e avaliação integrada de
@@ -976,9 +985,13 @@
         </aside>
 
         <nav class="topic-nav" aria-label="Navegação entre resumos">
-          <router-link class="topic-nav__link" to="/resumins">
-            <span>Voltar</span>
-            ← Todos os resumos
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacovigilancia">
+            <span>Índice</span>
+            ← Todos os assuntos
+          </router-link>
+          <router-link class="topic-nav__link" to="/resumins/unifal/farmacovigilancia/reacoes-adversas">
+            <span>Próximo</span>
+            Reações adversas →
           </router-link>
         </nav>
       </div>

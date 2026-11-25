@@ -45,10 +45,59 @@ const router = createRouter({
       component: () => import('@/views/resumins/quimica/CineticaQuimicaView.vue'),
     },
     {
+      path: '/resumins/unifal/farmacovigilancia',
+      alias: '/resumins/unifal/farmacovigilancia.view',
+      name: 'ResuminsUnifalFarmacovigilancia',
+      component: () => import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaIndexView.vue'),
+    },
+    {
       path: '/resumins/unifal/farmacovigilancia/resumogeral',
       alias: '/resumins/unifal/farmacovigilancia/resumogeral.view',
       name: 'ResuminsUnifalFarmacovigilanciaResumoGeral',
-      component: () => import('@/views/resumins/unifal/FarmacovigilanciaResumoGeralView.vue'),
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaResumoGeralView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/reacoes-adversas',
+      name: 'ResuminsUnifalFarmacovigilanciaReacoesAdversas',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaReacoesAdversasView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/hospitalar',
+      name: 'ResuminsUnifalFarmacovigilanciaHospitalar',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaHospitalarView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/busca-ativa',
+      name: 'ResuminsUnifalFarmacovigilanciaBuscaAtiva',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaBuscaAtivaView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/escalas',
+      name: 'ResuminsUnifalFarmacovigilanciaEscalas',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaEscalasView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/causalidade',
+      name: 'ResuminsUnifalFarmacovigilanciaCausalidade',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaCausalidadeView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/industria-rdc',
+      name: 'ResuminsUnifalFarmacovigilanciaIndustriaRdc',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaIndustriaRdcView.vue'),
+    },
+    {
+      path: '/resumins/unifal/farmacovigilancia/industria-pratica',
+      name: 'ResuminsUnifalFarmacovigilanciaIndustriaPratica',
+      component: () =>
+        import('@/views/resumins/unifal/farmacovigilancia/FarmacovigilanciaIndustriaPraticaView.vue'),
     },
     {
       path: '/resumins/unifal/operacoes',
@@ -126,6 +175,55 @@ const router = createRouter({
       path: '/resumins/farmacotec1/relatorios',
       name: 'ResuminsFarmacotec1Relatorios',
       component: () => import('@/views/resumins/farmacotec1/RelatoriosPraticaView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas',
+      name: 'ResuminsFarmacotec1Formas',
+      component: () => import('@/views/resumins/farmacotec1/formas/FormasFarmaceuticasView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/iodeto',
+      name: 'ResuminsFarmacotec1FormasIodeto',
+      component: () => import('@/views/resumins/farmacotec1/formas/FormasIodetoPotassioView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/xarope',
+      name: 'ResuminsFarmacotec1FormasXarope',
+      component: () =>
+        import('@/views/resumins/farmacotec1/formas/FormasXaropeClorfeniraminaView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/elixir',
+      name: 'ResuminsFarmacotec1FormasElixir',
+      component: () =>
+        import('@/views/resumins/farmacotec1/formas/FormasElixirParacetamolView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/tintura',
+      name: 'ResuminsFarmacotec1FormasTintura',
+      component: () => import('@/views/resumins/farmacotec1/formas/FormasTinturaBeladonaView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/colirio',
+      name: 'ResuminsFarmacotec1FormasColirio',
+      component: () => import('@/views/resumins/farmacotec1/formas/FormasColirioZincoView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/otologico',
+      name: 'ResuminsFarmacotec1FormasOtologico',
+      component: () =>
+        import('@/views/resumins/farmacotec1/formas/FormasOtologicoCarbonatoView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/errino',
+      name: 'ResuminsFarmacotec1FormasErrino',
+      component: () => import('@/views/resumins/farmacotec1/formas/FormasErrinoNafazolinaView.vue'),
+    },
+    {
+      path: '/resumins/farmacotec1/formas/suspensao',
+      name: 'ResuminsFarmacotec1FormasSuspensao',
+      component: () =>
+        import('@/views/resumins/farmacotec1/formas/FormasSuspensaoAntiacidaView.vue'),
     },
 
     {

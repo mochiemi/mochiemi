@@ -13,7 +13,7 @@
         <div class="intro__meta">
           <span class="intro__chip">Ensino médio · Química</span>
           <span class="intro__chip">Ensino superior · UNIFAL-MG</span>
-          <span class="intro__chip">18 resumos disponíveis</span>
+          <span class="intro__chip">34 resumos disponíveis</span>
         </div>
       </header>
 
@@ -87,8 +87,8 @@
         </div>
 
         <p class="coming-soon">
-          Disciplina DF 125 — 13 páginas: tópicos gerais, preparações líquidas e relatórios de aulas
-          práticas.
+          Disciplina DF 125 — 22 páginas: tópicos gerais, preparações líquidas, relatórios de aulas
+          práticas e análise crítica de formas farmacêuticas.
         </p>
       </section>
     </div>
@@ -117,11 +117,11 @@ const chemistryTopics = [
 
 const unifalTopics = [
   {
-    to: '/resumins/unifal/farmacovigilancia/resumogeral',
-    title: 'Farmacovigilância — resumo geral',
-    tag: 'Farmácia · 8 tópicos',
+    to: '/resumins/unifal/farmacovigilancia',
+    title: 'Farmacovigilância — resumos por assunto',
+    tag: 'Farmácia · 8 páginas',
     description:
-      'Conceito e histórico, evento adverso × RAM × erro de medicação, uso racional e automedicação, RWE e a base regulatória (RDC 406/2020 e IN 63/2020).',
+      'Resumo geral, reações adversas e sua classificação, farmacovigilância hospitalar (busca ativa e monitorização intensiva), escalas e avaliação de causalidade, e as obrigações da indústria na RDC 406/2020 e na IN 63/2020.',
   },
   {
     to: '/resumins/unifal/operacoes',
@@ -143,9 +143,9 @@ const farmacotecTopics = [
   {
     to: '/resumins/farmacotec1',
     title: 'Farmacotécnica I — resumos por tema',
-    tag: 'Farmácia · 13 páginas',
+    tag: 'Farmácia · 22 páginas',
     description:
-      'Classificação dos medicamentos, operações, conservação e acondicionamento, adjuvantes, corretivos, cálculos farmacêuticos, soluções simples e extrativas, xaropes, alcóoleos, colírios, otofármacos e errinos — além de 2 relatórios de aulas práticas.',
+      'Classificação dos medicamentos, operações, conservação e acondicionamento, adjuvantes, corretivos, cálculos farmacêuticos, soluções simples e extrativas, xaropes, alcóoleos, colírios, otofármacos e errinos — além de 2 relatórios de aulas práticas e da análise crítica de 8 formas farmacêuticas.',
   },
 ]
 </script>

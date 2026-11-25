@@ -29,7 +29,8 @@
           Cada assunto tem uma página própria, com índice, cartões curtos e tabelas de referência
           rápida. As páginas seguem a ordem das unidades do programa de ensino: primeiro os tópicos
           gerais (classificação, operações, adjuvantes, corretivos, cálculos), depois as preparações
-          líquidas e, por fim, as preparações de aplicação em mucosas.
+          líquidas, as preparações de aplicação em mucosas e, por fim, a análise crítica de oito
+          formas farmacêuticas montadas relatório por relatório.
         </p>
         <p class="study-note__source">
           Base: material das aulas do Prof. Antonio Luengo Garcia (UNIFAL-MG, 2026) e literatura
@@ -90,6 +91,32 @@
             <span class="topic-card__cta">Abrir relatório →</span>
           </router-link>
         </div>
+      </section>
+
+      <section class="subject" aria-labelledby="subject-formas">
+        <h2 id="subject-formas">Análise crítica das formas farmacêuticas</h2>
+
+        <div class="topic-grid">
+          <router-link
+            v-for="topic in formasTopics"
+            :key="topic.to"
+            :to="topic.to"
+            class="topic-card"
+          >
+            <span class="topic-card__tag">{{ topic.tag }}</span>
+            <h3 class="topic-card__title">{{ topic.title }}</h3>
+            <p>{{ topic.description }}</p>
+            <span class="topic-card__cta">Abrir análise →</span>
+          </router-link>
+        </div>
+
+        <p class="coming-soon">
+          Oito relatórios técnicos abertos em quatro perguntas: o que é, como se prepara, por que
+          cada insumo está na fórmula e o que pode dar errado.
+          <router-link to="/resumins/farmacotec1/formas"
+            >Ver índice e chave de leitura →</router-link
+          >
+        </p>
       </section>
 
       <nav class="topic-nav" aria-label="Navegação entre resumos">
@@ -199,6 +226,65 @@ const practicalTopics = [
     title: 'Relatórios de aulas práticas',
     description:
       'Relatório 1 — solução fluoretada de uso diário; Relatório 2 — xarope simples e xarope medicamentoso, com cálculos, técnica, ensaios e discussão.',
+  },
+]
+
+const formasTopics = [
+  {
+    to: '/resumins/farmacotec1/formas/iodeto',
+    tag: 'Solução oral',
+    title: 'Iodeto de potássio 10%',
+    description:
+      'Tiossulfato e EDTA protegendo um sal oxidável, mais filtração clarificante e envase em vidro âmbar.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/xarope',
+    tag: 'Xarope',
+    title: 'Xarope de clorfeniramina',
+    description:
+      'Sacarose a 65% como edulcorante e conservante osmótico, com controle de temperatura contra a inversão.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/elixir',
+    tag: 'Elixir',
+    title: 'Elixir de paracetamol',
+    description:
+      'Co-solvência ternária água–etanol–polióis, adição cruzada das fases e restrições do teor alcoólico.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/tintura',
+    tag: 'Extrato',
+    title: 'Tintura de beladona',
+    description:
+      'Percolação passo a passo: cominuição, imbibição, vazão controlada e prova de esgotamento com Mayer.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/colirio',
+    tag: 'Oftálmico',
+    title: 'Colírio de sulfato de zinco',
+    description:
+      'Esterilidade por filtração 0,22 µm, isotonia calculada e tampão borato que mantém o zinco solúvel.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/otologico',
+    tag: 'Otológico',
+    title: 'Cerumenolítico de carbonato de sódio',
+    description:
+      'Saponificação do cerume, liberação de CO₂ e glicerina como veículo de retenção e proteção.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/errino',
+    tag: 'Nasal',
+    title: 'Errino de nafazolina',
+    description:
+      'Tampão fosfato em pH 6,5, isotonia e conservante compatível com o batimento ciliar.',
+  },
+  {
+    to: '/resumins/farmacotec1/formas/suspensao',
+    tag: 'Suspensão',
+    title: 'Suspensão antiácida floculada',
+    description:
+      'Lei de Stokes, umectação, CMC-Na e teoria DLVO aplicadas à redispersão do frasco.',
   },
 ]
 </script>
